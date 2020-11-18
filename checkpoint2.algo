@@ -1,0 +1,58 @@
+ALGORITHM sum-distinct
+VAR
+X : ARRAY_OF INTEGER[10];
+T : ARRAY_OF INTEGER[10];
+S:INTEGER:=0;
+exist:INTEGER:=0;
+i,j:INTEGER;
+
+BEGIN
+
+  FOR i FROM 0 TO X.length-1 STEP 1  DO
+
+
+   FOR j FROM 0 TO T.length-1 STEP 1  DO
+   {IF (T[j]==X[i] THEN
+    exist:=1;
+    END FOR
+
+ELSE IF (exist:=0);
+  S:=S+X[i];
+  END IF
+    }
+
+    END FOR
+    Write(S)
+
+END
+
+
+ALGORITHM sum-overlapping
+VAR
+M : ARRAY_OF INTEGER[10];
+N : ARRAY_OF INTEGER[10];
+Sum:INTEGER:=0;
+ex:INTEGER:=1;
+i,j:INTEGER;
+
+BEGIN
+
+  FOR i FROM 0 TO M.length-1 STEP 1  DO
+
+
+   FOR j FROM 0 TO N.length-1 STEP 1  DO
+   {IF (N[j]!=M[i] THEN
+    ex:=0;
+    END FOR
+
+ELSE IF (ex:=1);
+  Sum:=Sum+(2*M[i]);
+  END IF
+    }
+
+    END FOR
+    Write(Sum)
+
+END
+
+  
